@@ -2,14 +2,21 @@
 
 import ProductCard from "./product_card";
 
-const productos = [1,2,3,4.5,6,7];
+const productos = [
+  {
+    name:"juan"
+  },
+  {
+    name:"pedro"
+  }
+];
 
 
 export default function Products(params) {
   return (
     <div className="flex flex-wrap justify-evenly">
       {productos.map((product, index) => (
-        <ProductCard key={index} name={product.name} price={product.price} />
+        <ProductCard key={index} name={product.name} />                    
       ))}
     </div>
   );
